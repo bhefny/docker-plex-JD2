@@ -2,7 +2,7 @@
 
 # export JD2_email=""
 # export JD2_password=""
-export JD2_CONFIG="/home/bhefny/jd2_config"
+export JD2_CONFIG=/home/bhefny/jd2_config
 export MYPLEX_MOVIE="/home/bhefny/plex_content/movie"
 export MYPLEX_TV="/home/bhefny/plex_content/tv"
 export MYPLEX_CONFIG="/home/bhefny/plex_content/config"
