@@ -5,7 +5,7 @@
 
 # export JD2_email=""
 # export JD2_password=""
-source .env
+source .env_vars
 
 mkdir -p $MYPLEX_MOVIE
 mkdir -p $MYPLEX_TV
