@@ -2,10 +2,12 @@
 
 # rm -Rf /home/bhefny/plex_content
 
-
-# export JD2_email=""
-# export JD2_password=""
 source .env_vars
+
+cat .env_vars > .env
+echo "GID=$GID" >> .env
+echo "UID=$UID" >> .env
+sort -u .env_vars > .env
 
 mkdir -p $MYPLEX_MOVIE
 mkdir -p $MYPLEX_TV
