@@ -2,9 +2,15 @@
 
 # rm -Rf /home/bhefny/plex_content
 
-source .env_vars
+JD2_CONFIG=/home/bhefny/jd2_config
+MYPLEX_MOVIE=/home/bhefny/plex_content/movie
+MYPLEX_TV=/home/bhefny/plex_content/tv
+MYPLEX_CONFIG=/home/bhefny/plex_content/config
 
-cat .env_vars > .env
+echo "JD2_CONFIG=$JD2_CONFIG" > .env
+echo "MYPLEX_MOVIE=$MYPLEX_MOVIE" >> .env
+echo "MYPLEX_TV=$MYPLEX_TV" >> .env
+echo "MYPLEX_CONFIG=$MYPLEX_CONFIG" >> .env
 echo "GID=$GID" >> .env
 echo "UID=$UID" >> .env
 
