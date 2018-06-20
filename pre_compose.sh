@@ -7,7 +7,7 @@ source .env_vars
 cat .env_vars > .env
 echo "GID=$GID" >> .env
 echo "UID=$UID" >> .env
-sort -u .env_vars > .env
+sort -u .env > .env
 
 mkdir -p $MYPLEX_MOVIE
 mkdir -p $MYPLEX_TV
