@@ -24,4 +24,4 @@ if [ -z "$JD2_password" ]; then
     exit 1
 fi
 
-echo "{'password':'$JD2_password', 'email':'$JD2_email'}" > "$JD2_CONFIG/org.jdownloader.api.myjdownloader.MyJDownloaderSettings.json"
+echo "{\"password\":\"$JD2_password\", \"email\":\"$JD2_email\"}" > "$JD2_CONFIG/org.jdownloader.api.myjdownloader.MyJDownloaderSettings.json"
