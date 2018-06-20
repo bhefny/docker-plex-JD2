@@ -7,7 +7,8 @@ services:
       GID: ${GID}
     volumes:
        - ${JD2_CONFIG}:/opt/JDownloader/cfg
-       - ${MYPLEX_MOVIE}:/downloads
+       - ${MYPLEX_MOVIE}:/downloads/movie
+       - ${MYPLEX_TV}:/downloads/tv
   plex:
     image: plusminus/jdownloader2-headless
     ports:
