@@ -10,7 +10,7 @@ services:
        - ${MYPLEX_MOVIE}:/downloads/movie
        - ${MYPLEX_TV}:/downloads/tv
   plex:
-    image: plusminus/jdownloader2-headless
+    image: linuxserver/plex
     ports:
       - "32400:32400"
       - "32400:32400/udp"
