@@ -2,11 +2,23 @@
 
 # rm -Rf /home/bhefny/plex_content
 
-JD2_CONFIG=/home/bhefny/jd2_config
-MYPLEX_MOVIE=/home/bhefny/plex_content/movie
-MYPLEX_TV=/home/bhefny/plex_content/tv
-MYPLEX_CONFIG=/home/bhefny/plex_content/config
+MY_FOLDER=/mycontent
+MY_PATH=~$MY_FOLDER
+JD2_CONFIG=$MY_PATH/jd2
+MYPLEX_MOVIE=$MY_PATH/plex/movie
+MYPLEX_TV=$MY_PATH/plex/tv
+MYPLEX_CONFIG=$MY_PATH/plex/config
 
+if [[ $(cat /etc/mtab | grep $MY_FOLDER) ]]; then
+    echo "-------- encfs 👍👍"
+else
+    # encfs ~/.encrypted ~/mycontent
+    # fusermount -u ~/mycontent
+    echo "----------- Failed to find encfs folder"
+    exit 1
+fi
+
+# create .env file to be used in docker compose
 echo "JD2_CONFIG=$JD2_CONFIG" > .env
 echo "MYPLEX_MOVIE=$MYPLEX_MOVIE" >> .env
 echo "MYPLEX_TV=$MYPLEX_TV" >> .env
