@@ -20,8 +20,8 @@ services:
       - "1900:1900/udp"
     environment:
       VERSION: 'latest'
-      PUID: ${UID}
-      PGID: ${GID}
+      # PUID: ${UID}
+      # PGID: ${GID}
     volumes:
        - ${MYPLEX_CONFIG}:/config
        - ${MYPLEX_TV}:/data/tvshows
