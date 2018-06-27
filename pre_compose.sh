@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-# rm -Rf /home/bhefny/plex_content
+# https://ubuntuforums.org/showthread.php?t=2391646
 
 MY_FOLDER=/mycontent
-MY_PATH=~$MY_FOLDER
+MY_PATH=/home/bhefny/$MY_FOLDER
 JD2_CONFIG=$MY_PATH/jd2
 MYPLEX_MOVIE=$MY_PATH/plex/movie
 MYPLEX_TV=$MY_PATH/plex/tv
@@ -12,8 +12,8 @@ MYPLEX_CONFIG=$MY_PATH/plex/config
 if [[ $(cat /etc/mtab | grep $MY_FOLDER) ]]; then
     echo "-------- encfs 👍👍"
 else
-    # encfs ~/.encrypted ~/mycontent
-    # fusermount -u ~/mycontent
+    # encfs -o allow_root /home/bhefny/.encrypted /home/bhefny/mycontent
+    # fusermount -u /home/bhefny/mycontent
     echo "----------- Failed to find encfs folder"
     exit 1
 fi
