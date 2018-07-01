@@ -11,6 +11,7 @@ services:
        - ${MYPLEX_MOVIE}:/downloads/movie
        - ${MYPLEX_TV}:/downloads/tv
        - ${MYPLEX_ANIME}:/downloads/anime
+       - ${MYPLEX_MOVIE_AR}:/downloads/movie_ar
   plex:
     network_mode: "host"
     image: linuxserver/plex
@@ -31,6 +32,7 @@ services:
        - ${MYPLEX_MOVIE}:/data/movies
        - ${MYPLEX_ANIME}:/data/anime
        - ${MYPLEX_CARTOON_AR}:/data/cartoon_ar
+       - ${MYPLEX_MOVIE_AR}:/data/movies_ar
 
 
 # docker run -d --name jd2 -v /home/bhefny/jd2_config:/opt/JDownloader/cfg -v /home/bhefny/plex_content:/downloads plusminus/jdownloader2-headless

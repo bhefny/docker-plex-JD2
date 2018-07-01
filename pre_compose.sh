@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+ #!/usr/bin/env bash
 
 # https://ubuntuforums.org/showthread.php?t=2391646
 
@@ -25,6 +25,7 @@ declare -A all_path=(
   ["MYPLEX_MOVIE"]=$MY_PATH/plex/movie
   ["MYPLEX_ANIME"]=$MY_PATH/plex/anime
   ["MYPLEX_CARTOON_AR"]=$MY_PATH/plex/cartoon_ar
+  ["MYPLEX_MOVIE_AR"]=$MY_PATH/plex/movie_ar
   )
 for i in "${!all_path[@]}"
 do
